@@ -1,0 +1,32 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.suggestionsList {
+  margin: 0;
+  margin-top: 0.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 24%);
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  top: 2.5rem;
+  left: 0;
+  border-radius: 0.25rem;
+  overflow: auto;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  background-color: var(--pq-surface);
+  color: var(--pq-on-surface);
+  max-height: 400px;
+}
+
+.listItem {
+  padding: 8px;
+  cursor: default;
+}
+
+.highlightedListItem {
+  background-color: var(--pq-primary);
+  color: var(--pq-on-primary);
+}

@@ -1,0 +1,12 @@
+.icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  position: absolute;
+  top: 18px;
+}
+
+.closeButton {
+  top: 0 !important;
+  right: 0 !important;
+}

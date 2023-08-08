@@ -1,0 +1,3 @@
+.buttonWithSpinner > *:not(.loadingSpinnerWrapper) {
+  opacity: 0 !important;
+}

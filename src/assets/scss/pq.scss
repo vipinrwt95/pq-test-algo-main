@@ -1,0 +1,655 @@
+// [START] Utility classes
+
+.font-montserrat {
+  font-family: $font-montserrat !important;
+}
+
+.pq-no-border-radius {
+  border-radius: 0 !important;
+}
+
+.pq-border-width-0 {
+  border-width: 0 !important;
+}
+
+.pq-border-width-5 {
+  border-width: 5px !important;
+}
+
+.pq-border-1 {
+  border: 1px solid !important;
+  border-color: #dee2e6 !important;
+
+  body.dark-only & {
+    border-color: var(--pq-primary-light-20) !important;
+  }
+}
+
+.pq-border-top-1 {
+  border-top: 1px solid;
+  border-color: #dee2e6;
+
+  body.dark-only & {
+    border-color: var(--pq-primary-light-20) !important;
+  }
+}
+
+.pq-hover-opacity-50:hover {
+  opacity: 0.5 !important;
+}
+
+.pq-hover-underline:hover {
+  text-decoration: underline !important;
+}
+
+.pq-divider {
+  body.dark-only & {
+    background-color: var(--pq-primary-light-20) !important;
+  }
+}
+
+.pq-hover-bg-primary:hover {
+  background-color: var(--pq-primary) !important;
+  color: var(--pq-on-primary) !important;
+}
+
+.pq-hover-bg-primary-light:hover {
+  background-color: var(--pq-primary-light-bg) !important;
+  color: var(--pq-on-primary-light-bg) !important;
+}
+
+// use this class in the case svg's height & width need to be overrode
+.pq-svg-size-14 {
+  height: 14px !important;
+  width: 14px !important;
+}
+
+.pq-no-select {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
+}
+
+/**
+This can be used when we need to show something when parent element is hovered.
+Use pq-visible-on-hover__parent on the parent element, and,
+use pq-visible-on-hover__child on the child element
+*/
+.pq-visible-on-hover__parent:not(:hover) > .pq-visible-on-hover__child {
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.pq-modal-w-lg-80 {
+  max-width: 80vw !important;
+
+  @media screen and (max-width: 991.98px) {
+    max-width: none !important;
+  }
+}
+
+.pq-modal-w-xl-80 {
+  max-width: 80vw !important;
+
+  @media screen and (max-width: 1199.98px) {
+    max-width: none !important;
+  }
+}
+
+.pq-modal-w-lg-90 {
+  max-width: 90vw !important;
+
+  @media screen and (max-width: 991.98px) {
+    max-width: none !important;
+  }
+}
+
+.pq-modal-w-xl-90 {
+  width: 90vw !important;
+  max-width: 1600px !important;
+
+  @media screen and (max-width: 1199.98px) {
+    width: 100% !important;
+    max-width: none !important;
+  }
+}
+
+.pq-surface {
+  background-color: var(--pq-surface) !important;
+  color: var(--pq-on-surface) !important;
+}
+
+.pq-primary-bg {
+  background-color: var(--pq-primary) !important;
+  color: var(--pq-on-primary) !important;
+}
+
+.pq-primary-light-bg {
+  background-color: var(--pq-primary-light-bg) !important;
+  color: var(--pq-on-primary-light-bg) !important;
+}
+
+.pq-cursor-zoom-in {
+  cursor: zoom-in !important;
+}
+
+.pq-cursor-grab {
+  cursor: grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.pq-cursor-grab:active {
+  cursor: grabbing;
+  cursor: -moz-grabbing;
+  cursor: -webkit-grabbing;
+}
+
+.pq-transparent-button {
+  width: auto;
+  height: auto;
+  line-height: 1;
+  background-color: transparent;
+  border-color: transparent;
+  color: inherit;
+  box-shadow: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  line-height: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pq-transparent-button:active,
+.pq-transparent-button:hover,
+.pq-transparent-button:focus {
+  background-color: transparent;
+  border-color: transparent;
+  color: inherit;
+  text-decoration: none;
+}
+
+.pq-line-clamp-1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /* number of lines to show */
+  -webkit-box-orient: vertical;
+  line-break: anywhere;
+  /* max-height: 72px; (number of lines to show) x (line height) */
+  /* height: 72px; */
+}
+
+// [END] Utility classes
+
+:root {
+  --pq-surface: #fff;
+  --pq-on-surface: #222;
+
+  --pq-input-bg: #fff;
+  --pq-on-input: #717171;
+
+  --pq-primary: #0763b1;
+  --pq-on-primary: #fff;
+
+  // non transparent version of --pq-primary-light-10 which is rgba(7, 99, 177, 0.1)
+  --pq-primary-light-bg: rgb(230 239 247);
+
+  --pq-on-primary-light-bg: var(--pq-on-surface);
+
+  --react-select-on-primary: #fff;
+  --pq-border-color: #e6edef;
+  --pq-drag-slot-border-color: #cccccc;
+
+  --pq-primary-light-20: rgba(7, 99, 177, 0.2);
+  --pq-primary-light-15: rgba(7, 99, 177, 0.15);
+  --pq-primary-light-10: rgba(7, 99, 177, 0.1);
+
+  // [START] - Light - react-select theme override
+  --react-select-primary: var(--pq-primary);
+  --react-select-primary75: var(--pq-primary-light-20);
+  --react-select-primary50: var(--pq-primary-light-15);
+  --react-select-primary25: var(--pq-primary-light-10);
+  --react-select-danger: red;
+  --react-select-neutral0: hsl(0, 0%, 100%);
+  --react-select-neutral5: hsl(0, 0%, 95%);
+  --react-select-neutral10: hsl(0, 0%, 90%);
+  --react-select-neutral20: hsl(0, 0%, 80%);
+  --react-select-neutral30: hsl(0, 0%, 70%);
+  --react-select-neutral40: hsl(0, 0%, 60%);
+  --react-select-neutral50: hsl(0, 0%, 50%);
+  --react-select-neutral60: hsl(0, 0%, 40%);
+  --react-select-neutral70: hsl(0, 0%, 30%);
+  --react-select-neutral80: hsl(0, 0%, 20%);
+  --react-select-neutral90: hsl(0, 0%, 10%);
+  // [END] - Light - react-select theme override
+
+  // [START] Config
+  --pq-sidebar-width: 290px;
+  --pq-sidebar-width-collapsed: 46px;
+  // [END] Config
+
+  // [START] - Sidebar
+  --pq-sidebar-transition: all 0.5s ease-out;
+  // [END] - Sidebar
+}
+
+:root .dark-only {
+  --pq-surface: #111727;
+  --pq-on-surface: rgba(255, 255, 255, 0.7);
+  --pq-input-bg: #0f2642;
+  --pq-on-input: rgba(255, 255, 255, 0.7);
+
+  --pq-primary-light-bg: rgb(16 31 53);
+  --pq-on-primary-light-bg: rgba(255, 255, 255, 0.7);
+
+  --pq-border-color: rgba(7, 99, 177, 0.2);
+  --pq-drag-slot-border-color: rgba(204, 204, 204, 0.7);
+
+  // [START] - Dark - react-select theme override
+  --react-select-primary75: rgba(36, 105, 92, 0.3);
+  --react-select-primary50: var(--pq-primary-light-20);
+  --react-select-primary25: var(--pq-primary-light-10);
+  --react-select-neutral5: hsl(0, 0%, 20%);
+  --react-select-neutral10: hsl(0, 0%, 30%);
+  // dropdown arrow, separator
+  --react-select-neutral20: hsl(0, 0%, 40%);
+  --react-select-neutral30: hsl(0, 0%, 50%);
+  // dropdown arrow on hover
+  --react-select-neutral40: hsl(0, 0%, 60%);
+  --react-select-neutral50: hsl(0, 0%, 70%);
+  // dropdown arrow on menu open
+  --react-select-neutral60: hsl(0, 0%, 80%);
+  --react-select-neutral70: hsl(0, 0%, 90%);
+  --react-select-neutral80: hsl(0, 0%, 95%);
+  --react-select-neutral90: hsl(0, 0%, 100%);
+  // [END] - Dark - react-select theme override
+}
+
+// [START] Button Override
+.btn-light {
+  body.dark-only & {
+    background-color: #202938 !important;
+    border-color: rgba(36, 105, 92, 0.2) !important;
+    color: hsla(0, 0%, 100%, 0.7);
+  }
+}
+
+.btn > span {
+  font-weight: inherit;
+}
+// [END] Button Override
+
+// [START] jsgrid icon
+
+.pq-jsgrid-icon {
+  background-image: url(../images/js-grid.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  overflow: visible;
+  -webkit-appearance: button;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+    transition: opacity 200ms linear;
+  }
+}
+
+.pq-jsgrid-delete-icon {
+  background-position: 0px -80px;
+}
+
+.pq-jsgrid-edit-icon {
+  background-position: 0px -120px;
+}
+
+.pq-jsgrid-icon + .pq-jsgrid-icon {
+  margin-left: 5px;
+}
+
+.pq-jsgrid-icon-margin-left {
+  margin-left: 5px;
+}
+// [END] jsgrid icon
+
+// [START] summernote
+.pq-reusable-summernote + .note-editor .dropdown-toggle::after {
+  all: unset;
+}
+
+.pq-reusable-summernote + .note-editor .note-dropdown-menu {
+  box-sizing: content-box;
+}
+
+.pq-reusable-summernote + .note-editor .note-modal-footer {
+  box-sizing: content-box;
+}
+
+.pq-reusable-summernote + .note-editor {
+  background-color: var(--pq-surface);
+}
+
+.pq-reusable-summernote + .note-editor ol,
+.pq-reusable-summernote + .note-editor ul {
+  display: block;
+}
+
+.pq-reusable-summernote + .note-editor ul {
+  padding-left: 2rem;
+  list-style: disc;
+}
+
+.pq-reusable-summernote + .note-editor .note-toolbar {
+  body.dark-only & {
+    background-color: transparent;
+    border-color: var(--pq-primary-light-20);
+  }
+}
+
+.pq-reusable-summernote + .note-editor .note-btn {
+  body.dark-only & {
+    background-color: #202938;
+    border-color: var(--pq-primary-light-20);
+    color: rgba(255, 255, 255, 0.7);
+  }
+}
+
+.pq-reusable-summernote + .note-editor .note-toolbar .note-dropdown-menu {
+  min-width: 165px;
+}
+
+// hide the font family dropdown
+.pq-reusable-summernote + .note-editor .note-btn-group.note-fontname {
+  display: none;
+}
+
+// set default font family for placeholder
+.pq-reusable-summernote + .note-editor .note-placeholder {
+  font-family: $font-montserrat;
+}
+
+// set default font family for editor
+.pq-reusable-summernote + .note-editor .note-editable {
+  font-family: $font-montserrat;
+}
+// [END] summernote
+
+// [START] order-history rdt_Table
+.order-history .rdt_TableRow {
+  body.dark-only &:hover {
+    outline-color: var(--pq-primary-light-20) !important;
+    border-bottom-color: var(--pq-primary-light-20) !important;
+    background-color: #111727;
+  }
+}
+
+.order-history .rdt_TableRow .rdt_TableCell:first-child {
+  background-color: transparent !important;
+}
+
+.order-history .rdt_TableRow .rdt_TableCell {
+  font-weight: 400 !important;
+  color: #222222 !important;
+}
+// [END] order-history rdt_Table
+
+// [START] checkbox
+.pq-checkbox-small::before {
+  height: 1rem !important;
+  width: 1rem !important;
+  font-size: 0.75rem !important;
+  top: 2px;
+}
+
+.checkbox.checkbox-dark label::before {
+  body.dark-only & {
+    background-color: #202938 !important;
+    border: 1px solid rgba(36, 105, 92, 0.2) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+  }
+}
+// [END] checkbox
+
+// [START] Hidden Input Ref
+.pq-hidden-input-ref {
+  height: 0;
+  width: 0;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+}
+// [END] Hidden Input Ref
+
+// [start] form-control
+// override specificity for .form-control-sm
+.form-control-sm {
+  font-size: 0.75rem !important;
+}
+// [END] form-control
+
+// react-tel-input [start]
+.react-tel-input {
+  font-family: inherit;
+
+  & .form-control {
+    border-color: #e6edef;
+    width: 100%;
+
+    body.dark-only & {
+      background-color: var(--pq-primary-light-20);
+      border-color: var(--pq-primary-light-20);
+      color: rgba(255, 255, 255, 0.7);
+    }
+  }
+  & .flag-dropdown {
+    border-color: #e6edef;
+    body.dark-only & {
+      background-color: #fff1;
+      border-color: var(--pq-primary-light-20);
+    }
+  }
+  & .selected-flag {
+    body.dark-only & {
+      background-color: transparent !important;
+    }
+    body.dark-only &:hover {
+      background-color: var(--pq-primary-light-20) !important;
+    }
+  }
+  & .country-list {
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.11);
+    border: 1px solid !important;
+    border-color: #dee2e6 !important;
+
+    body.dark-only & {
+      background-color: var(--pq-input-bg) !important;
+      border-color: var(--pq-primary-light-20) !important;
+    }
+    & .country {
+      color: var(--pq-on-input);
+      font-weight: 400;
+      padding-left: 12px;
+
+      &:hover {
+        background-color: var(--react-select-primary25);
+        body.dark-only & {
+          background-color: var(--pq-primary-light-20);
+        }
+      }
+      &.highlight {
+        background-color: var(--pq-primary);
+        color: white;
+      }
+      &.highlight > .dial-code {
+        color: inherit;
+      }
+      & > *,
+      & > .dial-code {
+        color: inherit;
+        font-weight: inherit;
+      }
+    }
+  }
+}
+
+// react-tel-input [END]
+
+// [start] react time picker
+.pq-time-picker-container {
+  margin-bottom: 0;
+  display: flex;
+  flex: 1 0 110px;
+}
+
+.pq-time-picker-container .input-group {
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.pq-time-picker-container .react-datepicker-wrapper {
+  width: calc(100% - 44px);
+}
+
+.pq-time-picker-container input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.pq-time-picker-container .react-datepicker__time-container {
+  width: 100px;
+}
+
+.pq-time-picker-container .react-datepicker__time-box {
+  width: 100% !important;
+}
+
+// [END] react time picker
+
+// [start] React Date Picker
+
+.pq-date-picker-container {
+  margin-bottom: 0;
+  display: flex;
+  flex-grow: 1;
+  // no use case found, so commented out for App Idle Slider slide date picker
+  // flex-basis: 158px;
+  flex-shrink: 1;
+}
+
+.pq-date-picker-container .react-datepicker-wrapper {
+  // no use case found, so commented out for App Idle Slider slide date picker
+  // width: calc(100% - 44px);
+}
+
+.pq-date-picker-container input {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.pq-date-picker-container .input-group {
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+// dropdown menu should have z-index of 4
+.react-datepicker__tab-loop {
+  z-index: 4;
+}
+
+.react-datepicker__time-list-item:hover {
+  body.dark-only & {
+    color: #000;
+  }
+}
+.react-datepicker__triangle::after {
+  body.dark-only & {
+    border-top-color: #202938 !important;
+  }
+}
+
+.react-datepicker__close-icon::after {
+  font-size: 24px;
+  height: 24px;
+  width: 24px;
+  color: var(--pq-on-input);
+  background-color: var(--pq-surface);
+}
+
+// [END] React Date Picker
+
+// [START] modal override
+body.swal2-shown,
+body.modal-open {
+  padding-right: 0 !important;
+}
+.modal-header .modal-title {
+  font-size: 1.1rem;
+}
+.modal-header .btn-close {
+  top: auto;
+}
+// [END] modal override
+
+// [START] react multi-date-picker
+// make the selected date border radius from circular to match pq design
+[class*='rmdp-day'] span {
+  border-radius: 5px;
+}
+// [END] react multi-date-picker
+
+// [START] Toast UI Calendar
+
+// the week day name in the calendar header should be white in dark mode. Did it here because using template on TuiCalendar doesn't work
+.tui-full-calendar-month-dayname-item > span:not(.tui-full-calendar-holiday-sun) {
+  color: var(--pq-on-surface) !important;
+}
+
+// [END] Toast UI Calendar
+
+// [START] scroll-bar styling
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px transparent;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 13px;
+  background-color: rgba(#0763b1, 0.3);
+}
+
+.pq-scrollbar {
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px transparent !important;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px !important;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 13px !important;
+    background-color: rgba(#0763b1, 0.3) !important;
+  }
+}
+
+// [END] scroll-bar

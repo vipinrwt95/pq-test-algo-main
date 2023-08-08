@@ -1,0 +1,11 @@
+/* this before element expands the hover-able area for the icon so that the tooltip gets triggered */
+.menuIcon::before {
+  content: '';
+  display: block;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: var(--pq-sidebar-width-collapsed);
+}

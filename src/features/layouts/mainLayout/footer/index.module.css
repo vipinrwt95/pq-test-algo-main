@@ -1,0 +1,11 @@
+.footer {
+  transition: var(--pq-sidebar-transition) !important;
+}
+
+.collapsedSidebarMargin {
+  margin-left: var(--pq-sidebar-width-collapsed) !important;
+}
+
+.expandedSidebarMargin {
+  margin-left: var(--pq-sidebar-width);
+}

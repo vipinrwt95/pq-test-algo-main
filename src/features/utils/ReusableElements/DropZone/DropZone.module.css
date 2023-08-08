@@ -1,0 +1,31 @@
+.dropZoneActive {
+  position: relative;
+}
+
+.dropZoneActive:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.dropZoneActive:before {
+  content: 'Drop Files Here';
+  position: absolute;
+  top: calc((100vh - 83px - 30px) / 2); /* 83px is the height of the header, and 30px is the top padding */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #fff;
+  font-weight: bold;
+  z-index: 2;
+  text-shadow: 0 0 30px #0005;
+}

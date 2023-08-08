@@ -1,0 +1,12 @@
+.dropdownContent {
+  width: 100%;
+  top: 4px !important;
+}
+
+.dropdownTrigger {
+  width: 200px;
+  text-align: left;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between !important;
+}

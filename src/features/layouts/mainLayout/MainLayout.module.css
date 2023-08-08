@@ -1,0 +1,12 @@
+.pageBodySidebarCollapsed.pageBodySidebarCollapsed.pageBodySidebarCollapsed {
+  margin-left: var(--pq-sidebar-width-collapsed) !important;
+}
+
+.pageBodySidebarExpanded {
+  margin-left: var(--pq-sidebar-width) !important;
+  padding-top: 27px !important;
+}
+
+.pageBody {
+  transition: var(--pq-sidebar-transition) !important;
+}

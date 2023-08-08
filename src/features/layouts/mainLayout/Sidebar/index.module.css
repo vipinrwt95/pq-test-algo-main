@@ -1,0 +1,68 @@
+.collapseIcon {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  background-color: var(--pq-primary);
+  color: white;
+  border-radius: 90px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+.sidebar {
+  transition: var(--pq-sidebar-transition) !important;
+}
+
+.sidebarCollapsed {
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  /* add 1px for the border to showup */
+  width: calc(var(--pq-sidebar-width-collapsed) + 1px) !important;
+}
+
+.sidebarExpanded {
+  opacity: 1 !important;
+  visibility: visible !important;
+
+  /* add 1px for the border to showup */
+  width: calc(var(--pq-sidebar-width) + 1px) !important;
+}
+
+.sidebarChild {
+  overflow: visible;
+  position: relative;
+  background: var(--pq-surface);
+  transition: var(--pq-sidebar-transition);
+}
+
+.sidebarChildExpanded {
+  /* extra 1px for the border right to be visible from it's parent <header> */
+  width: calc(var(--pq-sidebar-width) - 0px) !important;
+}
+
+.sidebarChildCollapsed {
+  /* extra 1px for the border right to be visible from it's parent <header> */
+  width: calc(var(--pq-sidebar-width-collapsed) - 0px) !important;
+}
+
+.contentContainer {
+  overflow: hidden;
+  transition: var(--pq-sidebar-transition);
+}
+
+.collapsedContentContainer {
+  width: var(--pq-sidebar-width-collapsed);
+}
+
+.expandedContentContainer {
+  width: var(--pq-sidebar-width);
+}
+
+.content {
+  width: var(--pq-sidebar-width);
+}

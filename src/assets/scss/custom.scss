@@ -1,0 +1,89 @@
+.clearCenterAndRetailerButton {
+    color: #2053A2;
+    border-color: #2053A2;
+
+    &:hover {
+        background-color: #2053A2;
+        color: white;
+    }
+}
+
+.setting-list {
+    border-radius: 0 0 0 7px;
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    float: right;
+    z-index: 1;
+    background-color: #fff;
+}
+
+.position-unset {
+    position: unset;
+}
+
+.setting-list .setting-option li {
+    display: inline-block;
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1365px){
+.dashboard-default-sec .setting-list .setting-primary, .dashboard-default-sec .setting-list .setting-secondary, .dashboard-default-sec .setting-list .setting-white {
+    width: 25px;
+    height: 25px;
+}
+}
+
+.vertically-centred-button{
+    margin: 2.8rem 0!important;
+}
+
+.swal2-styled.swal2-confirm {
+    background-color: red!important;
+}
+
+.swal2-styled.swal2-cancel {
+    background-color: forestgreen!important;
+}
+
+.color-picker {
+    height: 40px;
+    width: 40px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 3px 7px;
+    border: 1px solid #b8b8b8;
+    padding: 3px;
+    background-color: #f5f7fb;
+    cursor: pointer;
+}
+
+.flexBox {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+}
+
+// links table
+#links {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #links td, #links th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #links tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #links tr:hover {background-color: #ddd;}
+  
+  #links th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+  }

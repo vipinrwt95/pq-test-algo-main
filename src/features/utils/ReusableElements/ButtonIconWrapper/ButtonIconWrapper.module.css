@@ -1,0 +1,7 @@
+.wrapper {
+  height: 0;
+  overflow: visible;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}

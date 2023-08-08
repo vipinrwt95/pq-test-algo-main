@@ -1,0 +1,35 @@
+.profileWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: none !important;
+  height: 100px;
+  margin-bottom: 0 !important;
+  padding: 0 !important;
+}
+
+.profileWrapperCollapsed {
+  margin: 0 0.5rem !important;
+}
+
+.profileWrapperExpanded {
+  margin: 0 1.25rem !important;
+}
+
+.collapseTransition {
+  transition: var(--pq-sidebar-transition);
+}
+
+.avatarImage {
+  box-sizing: content-box;
+}
+
+.avatarImageExpanded {
+  width: 50px;
+  border-width: 5px !important;
+}
+
+.avatarImageCollapsed {
+  width: 30px;
+  border-width: 0px !important;
+}
